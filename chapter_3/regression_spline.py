@@ -1,16 +1,20 @@
 import numpy as np
-from scipy.optimize import curve_fit
 
-# Define the equation for the curve
-def func(x, a, b, c):
-    return a + b*x + c*x**2
+# Bộ dữ liệu mẫu
+x = np.array([1, 2, 3, 4, 5])
+y = np.array([2, 4, 6, 7, 9])
 
-# Define the data set
-xdata = np.array([1, 2, 3, 4, 5])
-ydata = np.array([1, 3, 5, 4, 3])
+# Tạo ma trận A và vector b cho hồi quy phi tuyến
+A = np.column_stack((x**2, x, np.ones_like(x)))
+b = y
 
-# Use curve_fit to find the parameter set that minimizes SSE
-popt, pcov = curve_fit(func, xdata, ydata)
+# Tìm nghiệm x bằng phương pháp hồi quy phi tuyến
+x_hat = np.linalg.lstsq(A, b, rcond=None)[0]
 
-# Print the parameter set
-print(popt)
+# Trích xuất các tham số a, b, c từ nghiệm x
+a = x_hat[0]
+b = x_hat[1]
+c = x_hat[2]
+
+# In đường cong khớp
+print("Đường cong khớp: y =", a, "* x^2 +", b, "* x +", c)
