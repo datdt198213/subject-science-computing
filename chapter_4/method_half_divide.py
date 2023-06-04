@@ -2,34 +2,38 @@ import math
 
 
 def f(x):
-    # Định nghĩa hàm f(x) của phương trình
 
     #sign(x-2) * sqrt(|x - 2|) = 0
-    # return math.copysign(1, x-2) * math.sqrt(abs(x))
+    # f = math.copysign(1, x-2) * math.sqrt(abs(x))
 
     # e**x - 2 = 0
-    return math.e**x - 2
+    # f = math.e**x - 2
+
+    f = x * x * x * x + 2 * x * x * x - 2
+    return f
 
 
 def bisection_method(a, b, epsilon):
     # Phương pháp chia đôi
-    while abs(b - a) > epsilon:
+    while (b - a) > epsilon:
         c = (a + b) / 2
+        print(f"a = {a}, c = {c}, b = {b}, epsilon = {b - a}")
         if f(c) == 0:
             return c
         elif f(a) * f(c) < 0:
             b = c
         else:
             a = c
-    epsilon_result = b - a
-    print("Sai số cuối cùng của hàm là: ", epsilon_result)
-    return (a + b) / 2
+
+    print(f"a = {a}, c = {c}, b = {b}, epsilon = {b - a}")
+    if (b == c): return a 
+    elif (a == c): return b
 
 # Thực hiện giải phương trình bằng phương pháp chia đôi
 a = 0
-b = 2
-epsilon = 0.01
+b = 1
+epsilon = 0.1
 root = bisection_method(a, b, epsilon)
 
 print("Nghiệm của phương trình là:", root)
-print("Giá trị tại ngiệm của phương trình là:", f(root))
+print("Sai số thực tế:", f(root))

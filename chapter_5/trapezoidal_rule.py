@@ -1,25 +1,21 @@
 import math
 
 def f(x):
-    # f = sin(x)
-    return math.sin(x)
+    # f = math.sin(x)
+    f = x*x*x*x + 2*x*x*x + 1
+    return f
+    
 
-def trapezoidal_rule(f, a, b, n):
-    h = (b - a) / n
-    integral = (f(a) + f(b)) / 2
+def trapezoidal_rule(f, a, b):
+    h = (b - a) / 2
+    integral = (f(a) + f(b)) * h 
     
-    for i in range(1, n):
-        x = a + i * h
-        integral += f(x)
-    
-    integral *= h
     return integral
 
-a = 0  # Giới hạn dưới của khoảng tích phân
-b = math.pi / 3  # Giới hạn trên của khoảng tích phân
-n = 5  # Số lượng đoạn chia
+a = 1  # Giới hạn dưới của khoảng tích phân
+b = 2 # Giới hạn trên của khoảng tích phân
 
-approx_integral = trapezoidal_rule(f, a, b, n)
+approx_integral = trapezoidal_rule(f, a, b)
 # exact_integral = 1 - math.cos(math.pi / 3)
 # error = abs(exact_integral - approx_integral)
 

@@ -4,10 +4,11 @@ def f(x):
     # f = sin(x)
     # return math.sin(x)
     # f = 1 / (1 + x*x)
-    if x != 0:
-        f = math.sin(x) / x
-    else: 
-        f = 1
+    # if x != 0:
+    #     f = math.sin(x) / x
+    # else: 
+    #     f = 1
+    f = x*x*x*x + 2*x*x*x + 1
     return f
 
 def trapezoidal_rule_expand(f, a, b, n):
@@ -24,9 +25,9 @@ def trapezoidal_rule_expand(f, a, b, n):
     print(f"\nIntegral = {integral} at loop value = {loop_value}")
     return integral
 
-a = 0  # Giới hạn dưới của khoảng tích phân
-b = 1  # Giới hạn trên của khoảng tích phân
-n = 5  # Số lượng đoạn chia
+a = 1  # Giới hạn dưới của khoảng tích phân
+b = 2  # Giới hạn trên của khoảng tích phân
+n = 3  # Số lượng đoạn chia
 
 approx_integral = trapezoidal_rule_expand(f, a, b, n)
 

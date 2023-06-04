@@ -1,7 +1,8 @@
 import math
 
 def f(t, y):
-    return -20*y + 7*math.e**(-1.5*t)
+    # return -20*y + 7*math.e**(-1.5*t)
+    return y + t*t*y + 1
 
 def euler_forward(h, t0, y0, tf):
     n = int((tf - t0) / h)
@@ -18,11 +19,11 @@ def euler_forward(h, t0, y0, tf):
     
     return t, y
 
-h = 0.01
+h = 0.1
 # h = 0.0001
 t0 = 0
-y0 = 5
-tf = 0.04
+y0 = 1
+tf = 0.2
 
 t, y = euler_forward(h, t0, y0, tf)
 
