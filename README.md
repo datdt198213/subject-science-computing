@@ -4,39 +4,41 @@
 
 Dạng 1: Nội suy + Đường thẳng 
 ```
-lagrange_line.py
+interpolation_linear.py
 ```
 Dạng 2: Nội suy + Đường cong
 ```
-
+interpolation_spline.py
 ```
 Dạng 3: Hồi quy + Đường thẳng
 ```
-
+regression_linear.py
 ```
 Dạng 4: Hồi quy + Đường cong
 ```
+regression_spline.py
 ```
+
 
 2. Chapter 4
+
+
 Dạng 1: Chia đôi
-```
-https://www.codesansar.com/numerical-methods/bisection-method-online-calculator.htm
-```
+<https://www.codesansar.com/numerical-methods/bisection-method-online-calculator.htm>
+
 Dạng 2: Dây cung
-```
-https://www.codesansar.com/numerical-methods/regula-falsi-or-false-position-method-online-calculator.htm
-```
+<https://www.codesansar.com/numerical-methods/regula-falsi-or-false-position-method-online-calculator.htm>
+
 Dạng 3: Newton
-```
-https://www.codesansar.com/numerical-methods/newton-raphson-method-online-calculator.htm
-```
+<https://www.codesansar.com/numerical-methods/newton-raphson-method-online-calculator.htm>
+
 Dạng 4: Cát tuyến
-```
-https://www.codesansar.com/numerical-methods/secant-method-online-calculator.htm
-```
+<https://www.codesansar.com/numerical-methods/secant-method-online-calculator.htm>
+
 
 3. Chapter 5
+
+
 Dạng 1. Sai phân
 ```
 Sai phân thuận: difference_forward.py
@@ -60,12 +62,22 @@ Mở rộng: trapezoidal_rule_expand.py
 ```
 
 Dạng 3. Simpson
+
+```
 1/3 cơ bản
+```
+
+```
 1/3 mở rộng
-3/8 cơ bản
-3/8 mở rộng
+```
+```
+3/8 
+```
+
 
 4. Chapter 6
+
+
 Dạng 1. Euler
 ```
 Euler thuận: euler_forward.py
@@ -86,3 +98,4 @@ Runge Kutta Bậc 3: runge_kutta3.py
 ```
 Runge Kutta Bậc 4: runge_kutt4.py
 ```
+
