@@ -6,6 +6,10 @@ Dạng 1: Nội suy + Đường thẳng
 ```
 interpolation_linear.py
 ```
+
+Link online 1: <https://www.dcode.fr/lagrange-interpolating-polynomial?fbclid=IwAR2BmsYq-D85xYMBwrtYxhuPtxOT7K8qD6shjjR4zs3hySMaItewdZeYJ08>
+
+Link online 2: <https://byjus.com/lagrange-interpolation-calculator/?fbclid=IwAR3jAieZU1R0z9-qK3VuCNRNrtVuhqv-ulNhSjh32gCmiH3SkkHBSFu4BdQ>
 Dạng 2: Nội suy + Đường cong
 ```
 interpolation_spline.py
@@ -14,12 +18,15 @@ Dạng 3: Hồi quy + Đường thẳng
 ```
 regression_linear.py
 ```
+
+Link online: <https://www.geogebra.org/m/fxbg6zhf?fbclid=IwAR2a0QkyXNgAymx00E8ZoQRAWeu6012qm1Mz0mY19n-Kmn2tbb9ynKEdelw>
+
 Dạng 4: Hồi quy + Đường cong
 ```
 regression_spline.py
 ```
 
-
+Tool online: <https://mycurvefit.com/>
 2. Chapter 4
 
 
