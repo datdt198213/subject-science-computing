@@ -17,8 +17,8 @@ def runge_kutta3_simpson13(f, x0, y0, h, n):
         k1 = h * f(x[i], y[i])
         k2 = h * f(x[i] + h/2, y[i] + k1/2)
         k3 = h * f(x[i] + h, y[i] - k1 + 2*k2)
-        x.append(x[i] + h)
-        y.append(y[i] + (k1 + 4*k2 + k3) / 6)
+        x.append(round(x[i] + h, 5))
+        y.append(round(y[i] + (k1 + 4*k2 + k3) / 6, 5))
 
     return x, y
 

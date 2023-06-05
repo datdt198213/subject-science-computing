@@ -8,7 +8,9 @@ def f(x):
     #     f = math.sin(x) / x
     # else: 
     #     f = 1
-    f = x*x*x*x + 2*x*x*x + 1
+    # f = x*x*x*x + 2*x*x*x + 1
+    # f = 1/ (1 + x*x)
+    f = 1 / x
     return f
 
 def trapezoidal_rule_expand(f, a, b, n):
@@ -26,8 +28,8 @@ def trapezoidal_rule_expand(f, a, b, n):
     return integral
 
 a = 1  # Giới hạn dưới của khoảng tích phân
-b = 2  # Giới hạn trên của khoảng tích phân
-n = 3  # Số lượng đoạn chia
+b = 5  # Giới hạn trên của khoảng tích phân
+n = 4  # Số lượng đoạn chia
 
 approx_integral = trapezoidal_rule_expand(f, a, b, n)
 

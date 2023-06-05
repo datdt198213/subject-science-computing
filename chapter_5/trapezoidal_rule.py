@@ -2,7 +2,8 @@ import math
 
 def f(x):
     # f = math.sin(x)
-    f = x*x*x*x + 2*x*x*x + 1
+    # f = x*x*x*x + 2*x*x*x + 1
+    f = 1/ (1 + x*x)
     return f
     
 

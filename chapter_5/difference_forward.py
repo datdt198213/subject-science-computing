@@ -25,7 +25,8 @@ return: giá trị của hàm f tại x
 def f(x):
     # return math.sin(x)
     # return x * ((math.cos(2.3*x))**(1/3))
-    return x*x*x*x + 2*x*x*x -x + 1
+    # return x*x*x*x + 2*x*x*x -x + 1
+    return math.cos(x)
 
 """
 Chuyển hàm fx sang dạng sym để  thực hiện tính đạo hàm
@@ -35,7 +36,8 @@ return: hàm fx với x là ký tự
 def fx_sym(x):
     # return sp.sin(x)
     # return x * ((sp.cos(2.3*x))**(1/3)) 
-    return x*x*x*x + 2*x*x*x -x + 1
+    # return x*x*x*x + 2*x*x*x -x + 1
+    return sp.cos(x)
 
 def forward_difference(f, x, h):
     return (f(x + h) - f(x)) / h
@@ -44,7 +46,7 @@ def main():
     x = sp.Symbol('x')
     fx = fx_sym(x)
     # point = math.pi / 3
-    point = 4
+    point = 1
     target_derivative = f_derivative(fx, x, point)
 
     # target_derivative = math.cos(math.pi / 3)

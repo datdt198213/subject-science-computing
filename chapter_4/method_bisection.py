@@ -30,9 +30,9 @@ def bisection_method(a, b, epsilon):
     elif (a == c): return b
 
 # Thực hiện giải phương trình bằng phương pháp chia đôi
-a = 0
-b = 1
-epsilon = 0.1
+a = 4
+b = 10
+epsilon = 0.00001
 root = bisection_method(a, b, epsilon)
 
 print("Nghiệm của phương trình là:", root)
